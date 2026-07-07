@@ -43,8 +43,14 @@ int main(){
             std::cout << "Resultado: " << resultado << std::endl;
             break;
         case 4:
-            resultado = num1 / num2;
-            std::cout << "Resultado: " << resultado << std::endl;
+            if(num2 == 0){
+                std::cout << "\nErro: nao e possivel dividir por zero." << std::endl;
+            }
+            else{
+                resultado = num1 / num2;
+                std::cout << "Resultado: " << resultado << std::endl;
+            }
+            
             break;
         default:
             std::cout << "Operacao invalida" << std::endl;
