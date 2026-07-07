@@ -6,8 +6,6 @@ int main(){
     int num1;
     int num2;
     int resultado;
-
-    // char é uma forma de armazenar apenas UM caractere, e no caso, eu irei armazenar os símbolos que serão usados nas operações matemáticas
     int operacao;
 
     std::cout << "===== CALCULADORA =====" << std::endl;
