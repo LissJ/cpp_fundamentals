@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main(){
-    
 
-    return 0
+    std::cout << "===== JOGO DA ADIVINHACAO =====";
+
+    return 0;
 }
