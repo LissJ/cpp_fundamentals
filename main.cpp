@@ -29,28 +29,26 @@ int main(){
 
     std::cout << std::endl;
 
-    if (operacao == 1){
-        resultado = num1 + num2;
-
-        std::cout << "O resultado da soma: " << resultado << std::endl;
-    }
-
-    if (operacao == 2){
-        resultado = num1 - num2;
-
-        std::cout << "O resultado da subtracao: " << resultado << std::endl;
-    }
-
-    if (operacao == 3){
-        resultado = num1 * num2;
-
-        std::cout << "O resultado da multiplicacao: " << resultado << std::endl;
-    }
-
-    if (operacao == 4){
-        resultado = num1 / num2;
-
-        std::cout << "O resultado da divisao: " << resultado << std::endl;
+    switch (operacao){
+        case 1:
+            resultado = num1 + num2;
+            std::cout << "Resultado: " << resultado << std::endl;
+            break;
+        case 2:
+            resultado = num1 - num2;
+            std::cout << "Resultado: " << resultado << std::endl;
+            break;
+        case 3:
+            resultado = num1 * num2;
+            std::cout << "Resultado: " << resultado << std::endl;
+            break;
+        case 4:
+            resultado = num1 / num2;
+            std::cout << "Resultado: " << resultado << std::endl;
+            break;
+        default:
+            std::cout << "Operacao invalida" << std::endl;
+            break;
     }
 
     return 0;
