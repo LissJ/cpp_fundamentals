@@ -12,6 +12,17 @@ int main(){
 
     std::cout << "===== CALCULADORA =====" << std::endl;
 
+    std::cout << "Escolha uma operacao: \n"
+              << "1 - Soma\n"
+              << "2 - Subtracao\n"
+              << "3 - Multiplicacao\n"
+              << "4 - Divisao\n\n";
+
+    std::cout << "Digite aqui sua escolha: ";
+    std::cin >> operacao;
+
+    std::cout << std::endl;
+
     std::cout << "Insira o primeiro numero: ";
     std::cin >> num1;
 
@@ -20,21 +31,28 @@ int main(){
 
     std::cout << std::endl;
 
-    std::cout << "Escolha uma operacao: \n"
-              << "1 - Soma\n"
-              << "1 - Subtracao\n"
-              << "1 - Multiplicacao\n"
-              << "1 - Divisao\n";
-
-    std::cout << std::endl;
-
-    std::cout << "Digite aqui sua escolha: ";
-    std::cin >> operacao;
-
     if (operacao == 1){
         resultado = num1 + num2;
 
         std::cout << "O resultado da soma: " << resultado << std::endl;
+    }
+
+    if (operacao == 2){
+        resultado = num1 - num2;
+
+        std::cout << "O resultado da subtracao: " << resultado << std::endl;
+    }
+
+    if (operacao == 3){
+        resultado = num1 * num2;
+
+        std::cout << "O resultado da multiplicacao: " << resultado << std::endl;
+    }
+
+    if (operacao == 4){
+        resultado = num1 / num2;
+
+        std::cout << "O resultado da divisao: " << resultado << std::endl;
     }
 
     return 0;
