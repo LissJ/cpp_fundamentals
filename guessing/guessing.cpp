@@ -18,8 +18,20 @@ int main(){
 
     attempts = attempts + 1;
 
+    if (guess == secret_number){
+        std::cout << "\nParabens! Voce acertou." << std::endl;
+    }
+
+    if (guess < secret_number){
+        std::cout << "\nO numero secreto e maior." << std::endl;
+    }
+
+    if (guess > secret_number){
+        std::cout << "\nO numero secreto é menor." << std::endl;
+    }
+
     std::cout << "\nSeu palpite foi: " << guess << std::endl;
-    std::cout << "\nTentativas: " << attempts << std::endl;
+    std::cout << "Tentativas: " << attempts << std::endl;
 
     return 0;
 }
