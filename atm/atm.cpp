@@ -16,7 +16,42 @@ int main(){
     std::cout << "\nInforme o saldo inicial da conta: R$";
     std::cin >> balance;
 
-    std::cout << "\nSaldo inicial: R$" << balance << std::endl;
+    do{
+        std::cout << "\n==========================" << std::endl;
+        std::cout << "      MENU PRINCIPAL" << std::endl;
+        std::cout << "==========================" << std::endl;
+
+        std::cout << "\n[1] - Consultar saldo\n"
+                  << "[2] - Depositar\n"
+                  << "[3] - Sacar\n"
+                  << "[4] - Sair\n";
+        std::cout << "\nSaldo atual: R$" << balance << std::endl;
+
+        std::cout << "\nEscolha uma das opcoes acima: ";
+        std::cin >> option;
+
+        switch(option){
+            case 1:
+                std::cout << "\n[Consultar saldo]\n";
+                break;
+            ;
+            case 2:
+                std::cout << "\n[Depositar]\n";
+                break;
+            ;
+            case 3:
+                std::cout << "\n[Sacar]\n";
+                break;
+            ;
+            case 4:
+                std::cout << "\n[Encerrando programa...]\n";
+                break;
+            ;
+            default:
+                std::cout << "\nOpcao invalida.\n";
+                break;
+        }
+    } while(option != 4);
 
     return 0;
 }
