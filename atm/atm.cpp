@@ -10,7 +10,8 @@ void waitForEnter(){
     // comandos responsáveis por não haver repetições do cabeçalho do 'MENU PRINCIPAL' durante as escolhas
         // utilizando a biblioteca <limits>
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cin.get();
+    // descarta qualquer coisa que o usuário digite até ele inserir o ENTER
+    while (std::cin.get() != '\n');
 }
 
 int main(){
