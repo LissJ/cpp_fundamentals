@@ -66,10 +66,14 @@ int main(){
                 std::cout << "\nInforme o valor do deposito: R$";
                 std::cin >> deposit_amout;
 
-                balance = balance + deposit_amout;
+                if(deposit_amout > 0){
+                    balance = balance + deposit_amout;
 
-                std::cout << "\nDeposito realizado com SUCESSO!" << std::endl;
-                std::cout << "Novo saldo: R$" << balance << std::endl;
+                    std::cout << "\nDeposito realizado com SUCESSO!" << std::endl;
+                    std::cout << "Novo saldo: R$" << balance << std::endl;
+                } else {
+                    std::cout << "\nO valor do deposito deve ser maior que zero.";
+                }
 
                 waitForEnter();
 
@@ -77,19 +81,26 @@ int main(){
             ;
             case 3:
                 std::cout << "\n==========================" << std::endl;
-                std::cout << "         SAQUE" << std::endl;
+                std::cout << "          SAQUE" << std::endl;
                 std::cout << "==========================" << std::endl;
 
                 std::cout << "\nInforme o valor do saque: R$";
                 std::cin >> withdraw_amount;
 
-                if(withdraw_amount <= balance){
-                    balance = balance - withdraw_amount;
+                if (withdraw_amount <= 0)
+                {
+                    std::cout << "\nO valor do saque deve ser maior que zero." << std::endl;
+                }
+                else if (withdraw_amount > balance)
+                {
+                    std::cout << "\nSaldo insuficiente." << std::endl;
+                }
+                else
+                {
+                    balance -= withdraw_amount;
 
-                    std::cout << "\nSaque realizado com SUCESSO!\n";
-                    std::cout << "Novo saldo: R$" << balance << std::endl;
-                } else {
-                    std::cout << "\nSaldo insuficiente para realizar o saque.\n";
+                    std::cout << "\nSaque realizado com sucesso!" << std::endl;
+                    std::cout << "Novo saldo: R$ " << balance << std::endl;
                 }
 
                 waitForEnter();
