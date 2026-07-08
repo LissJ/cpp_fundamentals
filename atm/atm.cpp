@@ -1,5 +1,6 @@
 #include <iostream>
-#include <iomanip>
+#include <iomanip> // biblioteca responsável pelo setprecision e fixed
+#include <limits> // biblioteca responsável pelo ignore()
 
 int main(){
     double balance;
@@ -37,6 +38,10 @@ int main(){
                 std::cout << "==========================" << std::endl;
 
                 std::cout << "\nSaldo disponível: R$" << balance << std::endl;
+                
+                std::cout << "\nPressione ENTER para voltar ao menu...";
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cin.get();
                 
                 break;
             ;
