@@ -17,6 +17,7 @@ void waitForEnter(){
 int main(){
     double balance;
     double deposit_amout;
+    double withdraw_amount;
     int option;
 
     // o termo 'fixed' é um manipulador de saída, que altera a forma de como os números float/double são exibidos
@@ -59,10 +60,10 @@ int main(){
             ;
             case 2:
                 std::cout << "\n==========================" << std::endl;
-                std::cout << "        DEPOSITO" << std::endl;
+                std::cout << "         DEPOSITO" << std::endl;
                 std::cout << "==========================" << std::endl;
 
-                std::cout << "Informe o valor do deposito: R$";
+                std::cout << "\nInforme o valor do deposito: R$";
                 std::cin >> deposit_amout;
 
                 balance = balance + deposit_amout;
@@ -75,7 +76,24 @@ int main(){
                 break;
             ;
             case 3:
-                std::cout << "\n[Sacar]\n";
+                std::cout << "\n==========================" << std::endl;
+                std::cout << "         SAQUE" << std::endl;
+                std::cout << "==========================" << std::endl;
+
+                std::cout << "\nInforme o valor do saque: R$";
+                std::cin >> withdraw_amount;
+
+                if(withdraw_amount <= balance){
+                    balance = balance - withdraw_amount;
+
+                    std::cout << "\nSaque realizado com SUCESSO!\n";
+                    std::cout << "Novo saldo: R$" << balance << std::endl;
+                } else {
+                    std::cout << "\nSaldo insuficiente para realizar o saque.\n";
+                }
+
+                waitForEnter();
+
                 break;
             ;
             case 4:
