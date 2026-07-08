@@ -29,7 +29,13 @@ int main(){
     std::cout << "==========================\n";
 
     std::cout << "\nInforme o saldo inicial da conta: R$";
-    std::cin >> balance;
+    
+    while (!(std::cin >> balance)){
+        std::cout << "\nEntrada inválida. Digite um valor numérico: R$ ";
+
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
 
     do{
         std::cout << "\n==========================" << std::endl;
@@ -64,7 +70,13 @@ int main(){
                 std::cout << "==========================" << std::endl;
 
                 std::cout << "\nInforme o valor do deposito: R$";
-                std::cin >> deposit_amout;
+                
+                while (!(std::cin >> deposit_amout)){
+                    std::cout << "\nEntrada inválida. Digite um valor numérico: R$ ";
+
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                }
 
                 if(deposit_amout > 0){
                     balance = balance + deposit_amout;
@@ -72,7 +84,7 @@ int main(){
                     std::cout << "\nDeposito realizado com SUCESSO!" << std::endl;
                     std::cout << "Novo saldo: R$" << balance << std::endl;
                 } else {
-                    std::cout << "\nO valor do deposito deve ser maior que zero.";
+                    std::cout << "\nO valor do deposito deve ser maior que zero.\n";
                 }
 
                 waitForEnter();
@@ -85,11 +97,17 @@ int main(){
                 std::cout << "==========================" << std::endl;
 
                 std::cout << "\nInforme o valor do saque: R$";
-                std::cin >> withdraw_amount;
+                
+                while (!(std::cin >> withdraw_amount)){
+                    std::cout << "\nEntrada inválida. Digite um valor numérico: R$ ";
+
+                    std::cin.clear();
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                }
 
                 if (withdraw_amount <= 0)
                 {
-                    std::cout << "\nO valor do saque deve ser maior que zero." << std::endl;
+                    std::cout << "\nO valor do saque deve ser maior que zero.\n" << std::endl;
                 }
                 else if (withdraw_amount > balance)
                 {
