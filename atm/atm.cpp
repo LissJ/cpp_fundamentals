@@ -32,7 +32,12 @@ int main(){
 
         switch(option){
             case 1:
-                std::cout << "\n[Consultar saldo]\n";
+                std::cout << "\n==========================" << std::endl;
+                std::cout << "     CONSULTAR SALDO" << std::endl;
+                std::cout << "==========================" << std::endl;
+
+                std::cout << "\nSaldo disponível: R$" << balance << std::endl;
+                
                 break;
             ;
             case 2:
