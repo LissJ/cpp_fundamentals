@@ -7,7 +7,7 @@ Repositório com projetos desenvolvidos durante meus estudos de C++, com foco na
 | Projeto         |         Status        | Conceitos                                                          |
 | --------------- | :-------------------: | ------------------------------------------------------------------ |
 | Calculator      |      ✅ Concluído      | Entrada e saída, variáveis, operadores aritméticos, `if`, `switch` |
-| Guessing Game   | 🚧 Em desenvolvimento | `while`, `bool`, geração de números aleatórios, controle de fluxo  |
+| Guessing Game   |      ✅ Concluído      | `while`, `bool`, geração de números aleatórios, controle de fluxo  |
 | ATM             |      ⏳ Planejado      | Menus, funções, validações                                         |
 | Login System    |      ⏳ Planejado      | Strings, autenticação simples                                      |
 | Student Manager |      ⏳ Planejado      | Vetores, estruturas de dados                                       |
