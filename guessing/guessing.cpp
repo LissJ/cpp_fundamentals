@@ -30,6 +30,11 @@ int main(){
             std::cout << "\nDigite um numero: ";
             std::cin >> guess;
 
+            if(guess < 1 || guess > 100){
+                std::cout << "\nDigite um numero valido entre 1 e 100.";
+                continue;
+            }
+
             attempts = attempts + 1;
 
             if (guess == secret_number){
