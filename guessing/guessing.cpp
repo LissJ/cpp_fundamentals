@@ -15,7 +15,8 @@ int main(){
     std::cout << "===== JOGO DA ADIVINHACAO =====\n";
     std::cout << "===============================";
 
-    std::cout << "\nTente adivinhar o numero secreto!\n";
+    std::cout << "\nO computador escolheu um numero entre 1 e 100." << std::endl;
+    std::cout << "Tente adivinhar qual e esse numero." << std::endl;
 
     while(win == false){
         std::cout << "\nDigite um numero: ";
@@ -24,7 +25,12 @@ int main(){
         attempts = attempts + 1;
 
         if (guess == secret_number){
-            std::cout << "\nParabens! Voce acertou." << std::endl;
+            win = true;
+
+            std::cout << "\n============================\n";
+            std::cout << "Parabens! Voce acertou." << std::endl;
+            std::cout << "Tentativas: " << attempts << std::endl;
+            std::cout << "============================\n";
         }
 
         if (guess < secret_number){
@@ -35,9 +41,6 @@ int main(){
             std::cout << "\nO numero secreto e menor." << std::endl;
         }
     }
-
-    std::cout << "\nSeu palpite foi: " << guess << std::endl;
-    std::cout << "Tentativas: " << attempts << std::endl;
 
     return 0;
 }
