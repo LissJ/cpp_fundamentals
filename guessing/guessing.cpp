@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 int main(){
 
@@ -7,7 +9,12 @@ int main(){
     int attempts;
     bool win;
 
-    secret_number = 50;
+    srand(time(nullptr));
+
+    secret_number = (rand() % 100) + 1;
+
+    std::cout << "Numero secreto: " << secret_number << std::endl;
+
     attempts = 0;
     win = false;
 
