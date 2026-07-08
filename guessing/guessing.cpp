@@ -30,6 +30,15 @@ int main(){
             std::cout << "\nDigite um numero: ";
             std::cin >> guess;
 
+            if(std::cin.fail()){
+                std::cin.clear();
+                std::cin.ignore(1000, '\n');
+
+                std::cout << "\nEntrada invalida. Digite apenas numeros.\n";
+
+                continue;
+            }
+
             if(guess < 1 || guess > 100){
                 std::cout << "\nDigite um numero valido entre 1 e 100.";
                 continue;
@@ -40,10 +49,10 @@ int main(){
             if (guess == secret_number){
                 win = true;
 
-                std::cout << "\n============================\n";
+                std::cout << "\n===============================\n";
                 std::cout << "Parabens! Voce acertou." << std::endl;
                 std::cout << "Tentativas: " << attempts << std::endl;
-                std::cout << "============================\n";
+                std::cout << "===============================\n";
 
                 std::cout << "\nDeseja jogar novamente? [s/n]: ";
                 std::cin >> play_again;
