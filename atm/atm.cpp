@@ -2,6 +2,17 @@
 #include <iomanip> // biblioteca responsável pelo setprecision e fixed
 #include <limits> // biblioteca responsável pelo ignore()
 
+// criando uma FUNÇÃO com VOID
+    // void foi escolhido pois ele não retorna nada, como no main() por exemplo, que possui um 'return 0;'
+void waitForEnter(){
+    std::cout << "\nPressione ENTER para voltar ao menu...";
+
+    // comandos responsáveis por não haver repetições do cabeçalho do 'MENU PRINCIPAL' durante as escolhas
+        // utilizando a biblioteca <limits>
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+}
+
 int main(){
     double balance;
     int option;
@@ -38,11 +49,10 @@ int main(){
                 std::cout << "==========================" << std::endl;
 
                 std::cout << "\nSaldo disponível: R$" << balance << std::endl;
-                
-                std::cout << "\nPressione ENTER para voltar ao menu...";
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cin.get();
-                
+
+                // executando a função que definimos lá no topo do código
+                waitForEnter();
+
                 break;
             ;
             case 2:
