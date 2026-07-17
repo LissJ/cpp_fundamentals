@@ -16,7 +16,7 @@ int main(){
     play_again = 's';
 
     while(play_again == 's'){
-        std::cout << "===============================\n";
+        std::cout << "\n\n===============================\n";
         std::cout << "===== JOGO DA ADIVINHACAO =====\n";
         std::cout << "===============================";
 
@@ -55,9 +55,16 @@ int main(){
                 std::cout << "Tentativas: " << attempts << std::endl;
                 std::cout << "===============================\n";
 
-                std::cout << "\nDeseja jogar novamente? [s/n]: ";
-                std::cin >> play_again;
-                play_again = std::tolower(play_again);
+                do{
+                    std::cout << "\nDeseja jogar novamente? [s/n]: ";
+                    std::cin >> play_again;
+                    play_again = std::tolower(play_again);
+
+                    if (play_again != 's' && play_again != 'n'){
+                        std::cout << "\nOpcao invalida. Digite apenas 's' ou 'n'.\n";
+                    }
+
+                } while (play_again != 's' && play_again != 'n');
             }
 
             if (guess < secret_number){
