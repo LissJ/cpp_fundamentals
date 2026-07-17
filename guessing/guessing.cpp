@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <cctype>
 
 int main(){
 
@@ -56,6 +57,7 @@ int main(){
 
                 std::cout << "\nDeseja jogar novamente? [s/n]: ";
                 std::cin >> play_again;
+                play_again = std::tolower(play_again);
             }
 
             if (guess < secret_number){
