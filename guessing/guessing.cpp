@@ -8,8 +8,12 @@ int main(){
     int secret_number;
     int guess;
     int attempts;
+
     bool win;
     char play_again;
+
+    int guesses[100];
+    int total_guesses;
 
     srand(time(nullptr));
 
@@ -26,6 +30,8 @@ int main(){
         secret_number = (rand() % 100) + 1;
         attempts = 0;
         win = false;
+
+        total_guesses = 0;
 
         while(win == false){
             std::cout << "\nDigite um numero: ";
@@ -45,6 +51,9 @@ int main(){
                 continue;
             }
 
+            guesses[total_guesses] = guess;
+            total_guesses++;
+
             attempts = attempts + 1;
 
             if (guess == secret_number){
@@ -53,6 +62,9 @@ int main(){
                 std::cout << "\n===============================\n";
                 std::cout << "Parabens! Voce acertou." << std::endl;
                 std::cout << "Tentativas: " << attempts << std::endl;
+                std::cout << "\nHistorico de palpites:\n";
+                for (int i = 0; i < total_guesses; i++)
+                {  std::cout << guesses[i] << std::endl;  }
                 std::cout << "===============================\n";
 
                 do{
