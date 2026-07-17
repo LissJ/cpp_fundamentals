@@ -8,7 +8,7 @@ Repositório com projetos desenvolvidos durante meus estudos de C++, com foco na
 | --------------- | :-------------------: | ------------------------------------------------------------------ |
 | Calculator      |      ✅ Concluído      | Entrada e saída, variáveis, operadores aritméticos, `if`, `switch` |
 | Guessing Game   |      ✅ Concluído      | `while`, `bool`, geração de números aleatórios, controle de fluxo  |
-| ATM             |      ✅ Concluído      | Menus, do...while, switch, validação de entrada, validação de regras de negócio, manipulação de double  |
+| ATM             |      ✅ Concluído      | Menus, `do...while`, `switch`, validação de entrada, validação de regras de negócio, manipulação de `double`  |
 | Login System    | 🚧 Em desenvolvimento | Strings, autenticação simples                                      |
 | Student Manager |      ⏳ Planejado      | Vetores, estruturas de dados                                       |
 | Tic-Tac-Toe     |      ⏳ Planejado      | Matrizes, funções, lógica de jogo                                  |
